@@ -1,0 +1,15 @@
+%form.user-signup
+  %h2 Please sign up
+  %label{:for => "inputEmail"} Email address
+  %input{:autofocus => "", :placeholder => "Email address", :required => "", :type => "email"}
+  %label{:for => "inputNationality"} Nationality
+  %select
+    %option{:value => "argentina"} Argentina
+    %option{:value => "united_states"} United States
+  %label{:for => "inputPassword"} Password
+  %input{:placeholder => "Password", :required => "", :type => "password"}
+  .checkbox
+    %label
+      %input{:type => "checkbox", :value => "remember-me"}
+      Remember me
+  %button.default{:type => "submit"} Sign up

@@ -11,5 +11,17 @@
   %body
     %header
       %h1 Tokyo App
+    %form.user-signin
+      %h2 Please sign in
+      %label{:for => "inputEmail"} Email address
+      %input{:autofocus => "", :placeholder => "Email address", :required => "", :type => "email"}
+      %label{:for => "inputPassword"} Password
+      %input{:placeholder => "Password", :required => "", :type => "password"}
+      .checkbox
+        %label
+          %input{:type => "checkbox", :value => "remember-me"}
+          Remember me
+      %button.default{:type => "submit"} Sign in
+
 
     %script{ type: "text/javascript", src: "/assets/application.js" }
