@@ -1,2 +1,6 @@
-# tokyo
-Tokyo App
+# Tokyo
+
+- Ruby
+- Sass
+- Coffee
+- Haml
