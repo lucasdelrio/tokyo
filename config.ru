@@ -9,6 +9,7 @@ map '/assets' do
   environment = Sprockets::Environment.new
   environment.append_path 'app/assets/javascripts'
   environment.append_path 'app/assets/stylesheets'
+  environment.append_path 'app/assets/images'
   # environment.js_compressor = Uglifier.new(:copyright => false)
   # environment.css_compressor = YUI::CssCompressor.new
   run environment
