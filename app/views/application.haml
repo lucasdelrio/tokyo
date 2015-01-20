@@ -11,17 +11,17 @@
   %body
     %header
       %h1 Tokyo App
-    %form.user-signin
-      %h2 Please sign in
-      %label{:for => "inputEmail"} Email address
-      %input{:autofocus => "", :placeholder => "Email address", :required => "", :type => "email"}
-      %label{:for => "inputPassword"} Password
-      %input{:placeholder => "Password", :required => "", :type => "password"}
-      .checkbox
-        %label
-          %input{:type => "checkbox", :value => "remember-me"}
-          Remember me
-      %button.default{:type => "submit"} Sign in
+
+    %form.user-expenses-form
+      %h2 Add Outgoing
+      %label{:for => "inputName"} Name
+      %input{:autofocus => "", :placeholder => "Name", :required => "", :type => "text"}
+      %label{:for => "inputPrice"} Price
+      %input{:placeholder => "Price", :required => "", :type => "number"}
+      %label{:for => "inputDate"} Date
+      %input{:placeholder => "Date", :required => "", :type => "date"}
+      %button.default{:type => "reset"} Reset
+      %button.success{:type => "submit"} Add
 
 
     %script{ type: "text/javascript", src: "/assets/application.js" }
