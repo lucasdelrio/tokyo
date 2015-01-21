@@ -9,19 +9,27 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
 
   %body
-    %header
-      %h1 Tokyo App
+    .navigation
+      .brand
+        Tokyo
+      .current-user
+        %a{:href => "#"}
+          %img{:src => "https://d13yacurqjgara.cloudfront.net/users/21415/avatars/normal/image.jpg?1393702037", :alt => ""}
 
-    %form.user-expenses-form
-      %h2 Add Outgoing
-      %label{:for => "inputName"} Name
-      %input{:autofocus => "", :placeholder => "Name", :required => "", :type => "text"}
-      %label{:for => "inputPrice"} Price
-      %input{:placeholder => "Price", :required => "", :type => "number"}
-      %label{:for => "inputDate"} Date
-      %input{:placeholder => "Date", :required => "", :type => "date"}
+    %form.form-user-expenses
+      %input{:type => "text"}
+      %label{:for => "input"}
+        %span Title
+
+      %input{:type => "text"}
+      %label{:for => "input"}
+        %span Price U$D
+
+      %input{:type => "text"}
+      %label{:for => "input"}
+        %span Date
+
       %button.default{:type => "reset"} Reset
       %button.success{:type => "submit"} Add
-
 
     %script{ type: "text/javascript", src: "/assets/application.js" }
