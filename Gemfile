@@ -6,6 +6,8 @@ ruby "2.1.2"
 gem "sinatra"
 # Assets integration for sinatra
 gem "sinatra-asset-pipeline"
+# Templating helpers
+gem "sinatra-partial"
 
 # Templating
 gem "haml"
