@@ -1,0 +1,60 @@
+//  Partial Content ==========
+//  01. Grid Custom Helpers
+//  02. Grid Custom System
+//  03. Responsiveness
+//  ==========================
+
+
+//  01. Clearfix
+%clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+
+//  02. Grid Custom Helpers
+$full: 100%
+$half: 100% / 2
+
+//  Media Queries Breakpoints
+$small: 30em // Portrait mobile to landscape mobile
+$medium: 50em // Portrait tablet to landscape tablet
+$large: 68.750em // Small desktop to large desktop
+
+//  Padding
+$col-padding: .625em
+
+//  Wrapper Width
+$wrapper-width: 100%
+
+//  Grid Widths
+$start: 1
+$end: 12
+
+
+//  03. Grid Custom System
+.wrapper
+  margin: 0 auto
+  max-width: $wrapper-width
+  @extend %clearfix
+
+[class*='col-']
+  float: left
+  padding: $col-padding
+
+.inner
+  padding: $col-padding
+  background: #FFF
+  border-radius: 6px
+
+@for $n from $start through $end
+  .col-#{$n}
+    width: $full / $n
+
+//  03. Responsiveness
+//  Mobile
+@media (max-width: $small)
+  @for $n from $start through $end
+    .col-#{$n}
+      width: $full

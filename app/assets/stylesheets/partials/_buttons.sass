@@ -5,26 +5,30 @@
 
 //  01. Buttons
 button, .button
+  position: relative
   display: inline-block
-  padding: 5px 12px
-  cursor: pointer
-  font-size: 13px
+  padding: 7px 12px
   color: #FFF
+  font-size: 13px
+  font-weight: bold
+  white-space: nowrap
+  vertical-align: middle
+  cursor: pointer
   border: none
   border-radius: 2px
   &.success
     background: $color-success
     &:hover
-      background: darkgreen
+      background: darken($color-success, 5%)
   &.error
-    background: red
+    background: $color-error
     &:hover
-      background: darkred
+      background: darken($color-error, 5%)
   &.info
-    background: lightblue
+    background: $color-info
     &:hover
-      background: blue
+      background: darken($color-info, 5%)
   &.default
-    background: lightgray
+    background: $color-default
     &:hover
-      background: gray
+      background: darken($color-default, 5%)

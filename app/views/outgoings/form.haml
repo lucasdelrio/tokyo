@@ -1,15 +1,18 @@
-%form.form-user-expenses
-  %input{:type => "text"}
-  %label{:for => "input"}
-    %span Title
+.wrapper
+  .col-2
+    .inner
+      %form
+        %label{:for => "input"}
+          %span Title
+        %input{:type => "text"}
 
-  %input{:type => "text"}
-  %label{:for => "input"}
-    %span Price U$D
+        %label{:for => "input"}
+          %span Price U$D
+        %input{:type => "text"}
 
-  %input{:type => "text"}
-  %label{:for => "input"}
-    %span Date
+        %label{:for => "input"}
+          %span Date
+        %input{:type => "text"}
 
-  %button.default{:type => "reset"} Reset
-  %button.success{:type => "submit"} Add
+        %button.default{:type => "reset"} Reset
+        %button.success{:type => "submit"} Add
