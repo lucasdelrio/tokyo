@@ -1,6 +1,14 @@
 .navigation
   .brand
-    T
+    %a T
+  .navigation-sections
+    %select
+      %option{value: "1"}
+        %a{href: "/"} Expenses
+      %option{value: "2"}
+        %a{href: "/groups"} Groups
+      %option{value: "3"}
+        %a{href: "/statistics"}Statistics
   .current-user
     %a{href: "#"}
       %img{src: "https://d13yacurqjgara.cloudfront.net/users/21415/avatars/normal/image.jpg?1393702037", alt: ""}

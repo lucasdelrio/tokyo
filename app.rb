@@ -36,7 +36,15 @@ class App < Sinatra::Base
   enable :partial_underscores
 
   get '/' do
-    haml :"outgoings/form", layout: :application
+    haml :'outgoings/form', layout: :application
+  end
+
+  get '/groups' do
+    haml :'groups/groups', layout: :application
+  end
+
+  get '/grid' do
+    haml :'grid/grid', layout: :application
   end
 
 end
