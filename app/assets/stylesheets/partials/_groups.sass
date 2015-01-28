@@ -1,0 +1,38 @@
+//  Partial Content ========
+//  01. Groups List
+//  ========================
+
+
+//  01. Groups List
+.groups-list
+  margin: 0
+  padding: 0
+  li
+    margin-bottom: .625em
+    padding: .625em
+    list-style-type: none
+    background: #FFF
+    border-radius: 3px
+    @extend %clearfix
+    &.status-positive
+      border-left: 3px solid $color-success
+    &.status-negative
+      border-left: 3px solid $color-error
+
+.groups-list-header
+  width: 100%
+  @extend %clearfix
+  h3
+    display: inline-block
+    +left
+    max-width: 70%
+  span
+    +right
+    max-width: 30%
+    padding: 2px 6px 0
+    white-space: nowrap
+    font-weight: normal
+    font-size: .688em
+    color: #FFF
+    background: $color-label-font
+    border-radius: 1.25em
