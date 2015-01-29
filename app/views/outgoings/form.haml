@@ -11,6 +11,13 @@
         %label{for: "input_date"} Date
         %input{name: "input_date", type: "date"}
 
+        %label{for: "input_group"} Group
+        %select
+          %option{value: "1"} Myself
+          %option{value: "2"} Home
+          %option{value: "3"} Best Friends
+          %option{value: "3"} Work
+
         .wrapper
           %button.default.right{type: "reset"} Reset
           %button.success{type: "submit"} Add

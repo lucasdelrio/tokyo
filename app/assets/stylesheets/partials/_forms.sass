@@ -4,22 +4,25 @@
 
 
 //  01. Forms
-input
-  display: inline-block
-  max-width: 25em
-  width: 100%
-  margin-bottom: $global-margin
-  padding: .75em
-  background: $color-input-bg
-  border: 1px solid $color-input-border
-  border-radius: .25em
-  &:focus
-    border-color: $color-primary
-    box-shadow: 0 0 .188em 0 $color-primary
-
 label
   display: block
   margin-bottom: 6px
   font-size: .813em
   font-weight: bold
   color: $color-label-font
+
+input,
+select
+  display: inline-block
+  max-width: 25em
+  height: 2.6em
+  width: 100%
+  margin-bottom: $global-margin
+  padding: .75em
+  background: $color-input-bg
+  border: 1px solid $color-input-border
+  border-radius: .25em
+
+input:focus
+  border-color: $color-primary
+  box-shadow: 0 0 .188em 0 $color-primary
