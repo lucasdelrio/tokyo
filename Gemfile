@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+source "https://rails-assets.org"
 
 ruby "2.1.2"
 
@@ -8,6 +9,8 @@ gem "sinatra"
 gem "sinatra-asset-pipeline"
 # Templating helpers
 gem "sinatra-partial"
+# Assets helpers
+# gem "sinatra-static-assets"
 
 # Templating
 gem "haml"
@@ -16,6 +19,10 @@ gem "haml"
 gem "sprockets"
 gem "coffee-script"
 gem "sass"
+
+# Bower packages
+# gem "rails-assets-#{bower package name}"
+gem 'rails-assets-angular'
 
 group :test, :development do
   gem "rerun"
