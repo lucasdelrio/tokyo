@@ -11,8 +11,10 @@
     margin-bottom: .625em
     padding: .625em
     list-style-type: none
-    background: #FFF
-    border-radius: 3px
+    color: #FFF
+    background: lighten($color-bg, 16%)
+    border-radius: .25em
+    box-shadow: inset 0 1px 0 lighten($color-bg, 26%), 0 1px 2px darken($color-bg, 26%)
     @extend %clearfix
     &.status-positive
       border-left: 3px solid $color-success
@@ -29,10 +31,11 @@
   span
     +right
     max-width: 30%
-    padding: 2px 6px 0
+    padding: 4px 8px 2px
     white-space: nowrap
     font-weight: normal
     font-size: .688em
     color: #FFF
-    background: $color-label-font
+    background: $color-bg
     border-radius: 1.25em
+    box-shadow: inset 0 -1px 0 lighten($color-bg, 26%)

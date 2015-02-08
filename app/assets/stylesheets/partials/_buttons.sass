@@ -16,6 +16,10 @@ button, .button
   cursor: pointer
   border: none
   border-radius: 2px
+  &.primary
+    background: $color-primary
+    &:hover
+      background: darken($color-primary, 5%)
   &.success
     background: $color-success
     &:hover
