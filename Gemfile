@@ -22,7 +22,14 @@ gem "sass"
 
 # Bower packages
 # gem "rails-assets-#{bower package name}"
+# Angular
 gem 'rails-assets-angular'
+gem 'rails-assets-angular-resource'
+gem 'rails-assets-angular-messages'
+gem 'rails-assets-angular-animate'
+
+# Client-side storage
+gem 'rails-assets-localforage'
 
 group :test, :development do
   gem "rerun"

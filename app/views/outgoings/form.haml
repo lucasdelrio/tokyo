@@ -1,16 +1,16 @@
-.wrapper
+.wrapper(ng-controller="ExpensesController")
   .col-2.center
     .inner
       %form
         %label{for: "input_title"} Title
-        %input{name: "input_title", type: "text"}
+        %input{name: "input_title", type: "text",   ng: { model: "expense.title" }}
 
         %label{for: "input_price"} Price U$D
-        %input{name: "input_price", type: "number"}
+        %input{name: "input_price", type: "number", ng: { model: "expense.price" }}
 
         %label{for: "input_date"} Date
-        %input{name: "input_date", type: "date"}
+        %input{name: "input_date", type: "date",    ng: { model: "expense.date" }}
 
         .wrapper
           %button.default.right{type: "reset"} Reset
-          %button.success{type: "submit"} Add
+          %button.success{type: "submit", ng: { click: "save($event)" }} Add

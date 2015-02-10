@@ -1,1 +1,1 @@
-#= require angular
+#= require angular/tokyo
