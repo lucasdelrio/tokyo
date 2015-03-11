@@ -31,6 +31,10 @@ gem 'rails-assets-angular-animate'
 # Client-side storage
 gem 'rails-assets-localforage'
 
+# Hash generator
+gem 'rails-assets-hashids'
+
 group :test, :development do
-  gem "rerun"
+  gem 'pry-byebug'
+  gem 'rerun'
 end

@@ -1,12 +1,11 @@
 angular.module('services')
 
-  .factory 'Localforage', () ->
-    debugger
+  .factory 'Localforage', () -> # TODO provide config
     localforage.config({
         driver      : localforage.LOCALSTORAGE, # Force WebSQL; same as using setDriver()
-        name        : 'Tokyo',
+        name        : 'tokyo',
         version     : 1.0,
-        storeName   : 'keyvaluepairs',          # Should be alphanumeric, with underscores.
+        storeName   : 'tokyo_dev',              # Should be alphanumeric, with underscores.
         description : 'Tokyo App'
     });
 

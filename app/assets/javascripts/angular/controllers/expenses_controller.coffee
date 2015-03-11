@@ -1,11 +1,15 @@
 angular.module('controllers')
 
-  .controller 'ExpensesController', ($scope, ExpensesStorage) ->
+  .controller 'ExpensesController', ($scope, UserStorage, AppConfig) ->
 
-    # Expense entity to be persisted
-    $scope.expense = {}
+    $scope.user = new Tokyo.Core.User AppConfig.userId
+    UserStorage.findOrCreate AppConfig.userId, (user) -> $scope.user = user
 
-    #
-    $scope.save = (event) ->
-      event.preventDefault()
-      ExpensesStorage.store $scope.expense
+    $scope.save = ->
+      $scope.user.addExpense new Tokyo.Core.Expense $scope.expense.title, $scope.expense.price, $scope.expense.date
+      UserStorage.store $scope.user
+
+      initializeExpense()
+
+    initializeExpense = -> $scope.expense = {} # Reset form
+    initializeExpense()

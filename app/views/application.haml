@@ -13,3 +13,7 @@
     = yield
 
     %script{ type: "text/javascript", src: "/assets/application.js" }
+
+    :javascript
+      angular.module('Tokyo')
+        .constant('AppConfig', #{app_config.to_json})
